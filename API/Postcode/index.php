@@ -207,4 +207,7 @@ if ($localDataNum == 0)
 }
 //output json
 header('Content-Type: application/json');
-echo json_encode(['code' => $shipping[$code]['code'], 'price' => $shipping[$code]['price']]);
+echo json_encode([
+    'code' => $shipping[$code]['code'],
+    'price' => $shipping[$code]['price']
+]);
