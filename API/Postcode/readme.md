@@ -1,1 +1,0 @@
-This API is used by over 3000 websites to fetch shipping costs from Australia post. It uses API key authentication and logger helper scripts to ensure each request is authenticated and logged for later billing.
