@@ -1,1 +1,1 @@
-This API is used by over 6000 websites to fetch suburb names for the passed postcode from an internal postcode and GEO location database. It uses API key authentication and logger helper scripts to ensure each request is authenticated and logged for later billing.
+This API is used by over ecommerce 6000 websites to fetch suburb names for the passed postcode from an internal postcode and GEO location database. It uses API key authentication and logger helper scripts to ensure each request is authenticated and logged for later billing.
