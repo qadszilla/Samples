@@ -16,7 +16,7 @@ function call($url)
     curl_setopt($ch, CURLOPT_URL, $serviceURL.$url);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
     curl_setopt($ch, CURLOPT_TIMEOUT, 5);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, ['AUTH-KEY: a1566280-9569-412b-b119-5168aad57955']);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, ['AUTH-KEY: <key-removed-from-sample>']);
     curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
     curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 0);
     $xml = curl_exec($ch);
