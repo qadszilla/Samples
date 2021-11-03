@@ -1,4 +1,4 @@
-** Due to NDA, I am not able to share too much on this project; but references can be obtained from teh company if required **
+## Due to NDA, I am not able to share too much on this project; but references can be obtained from the company if required
 
 This Javascript sample is from a SaaS project which works much like Shopify, but is Australian built and hosted. Anyone can create an account, register a domain and start selling their products within an hour. The project was built using drag and drop content editor to power wide variety of elements.
 
