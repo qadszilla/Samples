@@ -192,11 +192,6 @@ if (number_format($shipping[$code]['price'], 2, '.', '') <= 0)
 {
     $shipping[$code]['price'] = 35;
 }
-if ($_GET['shippingOnly'] != 'y')
-{
-    echo $shipping[$code]['code']."\n";
-}
-echo $shipping[$code]['price'];
 //log the call for later debugging needs
 if ($localDataNum == 0)
 {
@@ -210,21 +205,6 @@ if ($localDataNum == 0)
     $service_name = trim($service->postage_result->service);
     mysqli_query($mysqli, "INSERT INTO `postoffice_shipping` (`from_postcode`, `to_postcode`, `to_country`, `weight`, `service_name`, `service_code`, `shipping_fee`, `stamp`, `hash`) VALUES ('{$_GET['from_postcode']}', '{$_GET['to_postcode']}', '{$_GET['country_code']}', '{$_GET['weight']}', '$service_name', '$code', '{$shipping[$code]['price']}', '$time', '$hash')");
 }
-//debug output
-if ($_GET['debug'] == 'y' && $localDataNum == 0)
-{
-    echo '<br>https://digitalapi.auspost.com.au'.$url;
-    echo '<pre>';
-    echo 'Parsed - ';
-    print_r($shipping);
-    echo '<hr>Unedited - ';
-    print_r($service);
-}
-if ($_GET['debug'] == 'y' && $localDataNum == 1)
-{
-    echo '<br>Local source';
-    echo '<pre>';
-    print_r($shipping);
-    echo '<hr>Unedited - ';
-    print_r($service);
-}
+//output json
+header('Content-Type: application/json');
+echo json_encode(['code' => $shipping[$code]['code'], 'price' => $shipping[$code]['price']]);
