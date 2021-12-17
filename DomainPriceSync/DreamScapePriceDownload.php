@@ -14,7 +14,6 @@ class DreamScapePriceDownload extends Command
      * @var string
      */
     protected $signature = 'DreamScape:PriceDownload';
-
     /**
      * The console command description
      *
