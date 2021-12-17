@@ -9,21 +9,21 @@ use Illuminate\Support\Facades\Http;
 class DreamScapePriceDownload extends Command
 {
     /**
-     * The name and signature of the console command.
+     * The name and signature of the console command
      *
      * @var string
      */
     protected $signature = 'DreamScape:PriceDownload';
 
     /**
-     * The console command description.
+     * The console command description
      *
      * @var string
      */
     protected $description = 'Download domain prices from Dreamscape';
 
     /**
-     * Create a new command instance.
+     * Create a new command instance
      *
      * @return void
      */
